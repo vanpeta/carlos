@@ -6,7 +6,18 @@
   font-family: "My Custom Font";
 }
 #background-header {
-  z-index: -1;
   position: absolute;
+  z-index: -1;
+}
+#about-me {
+}
+nav {
 
+}
+#welcome {
+  margin-top: 500px;
+}
+#about-me {
+  position: absolute;
+  padding-bottom: 50px;
 }
