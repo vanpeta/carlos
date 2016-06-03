@@ -23,7 +23,7 @@ span {
 p {
   white-space: nowrap;
   overflow: hidden;
-  width: auto;
+  /*width: auto;*/
   animation: type 6s steps(60, end);
 }
 @keyframes type{
