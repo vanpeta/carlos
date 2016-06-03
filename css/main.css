@@ -4,6 +4,7 @@
 }
 .brand-logo {
   font-family: "My Custom Font";
+  font-size: 40px;
 }
 #background-header {
   position: absolute;
