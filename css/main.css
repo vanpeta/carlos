@@ -10,7 +10,9 @@
   position: absolute;
   z-index: -1;
 }
-#about-me {
+#about, #portfolo, #contact {
+  font-family: "My Custom Font";
+  font-size: 23px;
 }
 nav {
 
