@@ -10,5 +10,15 @@ $(document).ready(function(){
           $("#name").css({transition: "font-size 1s", "font-size": "40px"});
         }
     })
+  $('.projects').hover(
+    function(){
+    $(this).find('img').css({'opacity': '0.3'})
+    $(this).find('span').show();
+    },
+    function(){
+      $(this).find('img').css({'opacity': '1.0'})
+      $(this).find('span').hide();
+    })
 })
+
 

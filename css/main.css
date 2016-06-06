@@ -10,11 +10,7 @@
   position: absolute;
   z-index: -1;
 }
-#about, #portfolo, #contact {
-  font-family: "My Custom Font";
-  font-size: 23px;
-}
-span {
+#cursor {
   animation: blink 1s infinite;
 }
 @keyframes blink{
@@ -37,11 +33,46 @@ p:nth-child(2){
   50%{width: 0;}
   100%{ width: 100; }
 }
-
 #about-me {
-  position: absolute;
+  position: initial;
   padding-bottom: 50px;
 }
 header {
   height: 90vh;
 }
+#skills {
+  position: initial;
+  padding-bottom: 50px;
+}
+.devicons {
+  font-size: 125px;
+}
+.icon {
+  display: inline-block;
+  margin-right: 10px
+}
+#materializecss{
+  height: 115px;
+}
+#my-portfolio {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+#work {
+  padding-bottom: 25px;
+}
+.projects-span {
+  position: absolute;
+  top: 25%;
+  left: 11%;
+  display: none;
+  width: 80%
+}
+#projects-github {
+  font-size: 40px;
+}
+a {
+  color: inherit;
+}
+
+
