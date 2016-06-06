@@ -74,5 +74,16 @@ header {
 a {
   color: inherit;
 }
+i {
+  font-size: 50px;
+}
+.contact-icon {
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.contact-name {
+  margin-top: -15px;
+}
 
 
