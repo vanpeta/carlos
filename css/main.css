@@ -38,15 +38,12 @@ p:nth-child(2){
 header {
   height: 95vh;
 }
-@media (max-width: 1900px) {
+@media (min-width: 768px) {
   header {
-    height: 60vh;
+    height: 95vh;
   }
 }
 @media (max-width: 1250px) {
-  header {
-    height: 30vh;
-  }
   #about-me {
     padding-bottom: 30px;
   }
