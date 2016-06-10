@@ -68,6 +68,12 @@ header {
   }
 }
 
+@media (max-width: 500px) {
+  .projects-span{
+    display: none;
+  }
+}
+
 
 #skills {
   position: initial;
