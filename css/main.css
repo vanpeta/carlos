@@ -19,7 +19,6 @@
 p {
   white-space: nowrap;
   overflow: hidden;
-  /*width: auto;*/
   animation: type 6s steps(60, end);
 }
 @keyframes type{
@@ -35,11 +34,41 @@ p:nth-child(2){
 }
 #about-me {
   position: initial;
-  padding-bottom: 50px;
 }
 header {
-  height: 90vh;
+  height: 95vh;
 }
+@media (min-width: 768px) {
+  header {
+    height: 95vh;
+  }
+}
+@media (max-width: 1250px) {
+  #about-me {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    height: 15vh;
+  }
+}
+
+@media (min-width: 600px) {
+  #about-me {
+    height: 493px;
+  }
+}
+@media (max-width: 992px) {
+  #name-title {
+    display: none;
+  }
+  #portfolio-btn {
+    display: none;
+  }
+}
+
+
 #skills {
   position: initial;
   padding-bottom: 50px;

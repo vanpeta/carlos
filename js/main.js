@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  console.log($(window).scrollTop())
     $(window).scroll(function(){
         if($(window).scrollTop()>65){
             $("#navbar").css({transition: "background-color 1s", "background-color": "#ffffff"})
