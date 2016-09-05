@@ -115,4 +115,9 @@ i {
   margin-top: -15px;
 }
 
+@media (max-width: 500px) {
+  .projects-span{
+    top: 9%;
+  }
+}
 
