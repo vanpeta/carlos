@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(window).scroll(function(){
     if($(window).scrollTop()>40){
-      $('.box1').addClass('navBarOn')
+      $('.box1').addClass('navBarOn');
       $('nav').removeClass('hidden');
     } else {
       $('.box1').removeClass('navBarOn');
@@ -14,5 +14,11 @@ var pattern = Trianglify({
   height: window.innerHeight
 });
 $('main').append(pattern.canvas());
+
+$('.navBarElements').hover(function() {
+  $(this).find('.navText').removeClass('hidden');
+}, function() {
+  $(this).find('.navText').addClass('hidden');
+});
 
 
