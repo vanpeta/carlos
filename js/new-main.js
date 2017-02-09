@@ -7,7 +7,17 @@ $(document).ready(function(){
       $('.box1').removeClass('navBarOn');
       $('nav').addClass('hidden');
     }
-  });
+    if ($(window).scrollTop() > 375) {
+      $('.arrow-container').removeClass('pointing');
+      $('.arrow-container').addClass('stick pic');
+      $('.arrow').addClass('hidden');
+    }
+    if ($(window).scrollTop() < 375) {
+      $('.arrow-container').addClass('pointing');
+      $('.arrow-container').removeClass('stick pic');
+      $('.arrow').removeClass('hidden');
+    }
+  })
 });
 var pattern = Trianglify({
   width: window.innerWidth,
@@ -20,5 +30,7 @@ $('main').append(pattern.canvas());
 // }, function() {
 //   $(this).find('.navText').addClass('hidden');
 // });
+
+
 
 

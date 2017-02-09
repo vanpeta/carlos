@@ -19,6 +19,23 @@
   100% { top: 80%; }
 }
 
+@-webkit-keyframes makeItPic {
+  0% { width: 75px; height: 75px; margin-left: -40px; }
+  100% { width: 130px; height: 130px; margin-left: -65px}
+}
+@-moz-keyframes makeItPic {
+  0% { width: 75px; height: 75px; margin-left: -40px; }
+  100% { width: 130px; height: 130px; margin-left: -65px}
+}
+@-o-keyframes makeItPic {
+  0% { width: 75px; height: 75px; margin-left: -40px; }
+  100% { width: 130px; height: 130px; margin-left: -65px}
+}
+@keyframes makeItPic {
+  0% { width: 75px; height: 75px; margin-left: -40px; }
+  100% { width: 130px; height:  130px; margin-left: -65px}
+}
+
 @-webkit-keyframes rotateText {
   0% { -webkit-transform: rotateX(0deg); }
   25% { -webkit-transform: rotateX(90deg); }
@@ -47,7 +64,7 @@
   75% { -o-transform: rotateX(270deg); }
   100% { -o-transform: rotateX(360deg); }
   }
-.box1, .box1.navBarOn, .box1.navBarOn > .greeting, .greeting, .navBarElements, .navBarElements:Hover, .navBarElements:Hover > .navText {
+.box1, .box1.navBarOn, .box1.navBarOn > .greeting, .greeting, .navBarElements, .navBarElements:Hover, .navBarElements:Hover > .navText, .pointing:Hover, .pic {
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
@@ -135,11 +152,16 @@ canvas {
   border-radius: 100px;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, .5);
+}
+.pointing {
   cursor: pointer;
   -webkit-animation: pointing 5s infinite;
   -moz-animation: pointing 5s infinite;
   -o-animation: pointing 5s infinite;
   animation:  pointing 5s infinite;
+}
+.pointing:Hover {
+  background-color: rgba(94, 94, 94, .5)
 }
 .arrow {
   color: #3b8ec0;
@@ -147,4 +169,21 @@ canvas {
   top:50%;
   left: 50%;
   margin: -8px 0 0 -8px;
+}
+.arrow-container.stick {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -40px;
+}
+.pic {
+  -webkit-animation: makeItPic .9s linear;
+  -moz-animation: makeItPic .9s linear;
+  -o-animation: makeItPic .9s linear;
+  animation:  makeItPic .9s linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
