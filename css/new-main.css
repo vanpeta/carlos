@@ -18,6 +18,42 @@
   40% { top: 81%; }
   100% { top: 80%; }
 }
+
+@-webkit-keyframes rotateText {
+  0% { -webkit-transform: rotateX(0deg); }
+  25% { -webkit-transform: rotateX(90deg); }
+  50% { -webkit-transform: rotateX(180deg); }
+  75% { -webkit-transform: rotateX(270deg); }
+  100% { -webkit-transform: rotateX(360deg); }
+}
+@-moz-keyframes rotateText {
+  0% { -moz-transform: rotateX(0deg); }
+  25% { -moz-transform: rotateX(90deg); }
+  50% { -moz-transform: rotateX(180deg); }
+  75% { -moz-transform: rotateX(270deg); }
+  100% { -moz-transform: rotateX(360deg); }
+  }
+@keyframes rotateText {
+  0% { transform: rotateX(0deg); }
+  25% { transform: rotateX(90deg); }
+  50% { transform: rotateX(180deg); }
+  75% { transform: rotateX(270deg); }
+  100% { transform: rotateX(360deg); }
+  }
+@-o-keyframes rotateText {
+  0% { -o-transform: rotateX(0deg); }
+  25% { -o-transform: rotateX(90deg); }
+  50% { -o-transform: rotateX(180deg); }
+  75% { -o-transform: rotateX(270deg); }
+  100% { -o-transform: rotateX(360deg); }
+  }
+.box1, .box1.navBarOn, .box1.navBarOn > .greeting, .greeting, .navBarElements, .navBarElements:Hover, .navBarElements:Hover > .navText {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
 body {
   margin: 0;
   height: 200vh;
@@ -43,18 +79,8 @@ canvas {
   width: 500px;
   height: 125px;
   text-align: center;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
 }
 .box1.navBarOn {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   background: rgba(255, 255, 255, .5);
   margin: 0;
   width: 100% !important;
@@ -63,19 +89,9 @@ canvas {
   left: 0;
 }
 .box1.navBarOn > .greeting {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   opacity: 0;
 }
 .greeting {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   margin: auto;
   line-height: 125px;
   font-family: monaco;
@@ -83,28 +99,31 @@ canvas {
   color: #e1e1e1;
 }
 .navBarElements {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   display: inline-block;
   color: #3b8ec0;
   font-family: monaco;
   line-height: 60px;
   width: 105px;
+  background-color: transparent;
 }
 .navBarElements:Hover {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   background-color: #e1e1e1;
   width: 160px;
 }
-.navIcon, .navText {
+.navIcon {
   display: inline-block;
+}
+.navText {
+  display: none;
+  opacity: 0;
+}
+.navBarElements:Hover > .navText {
+  display: inline-block;
+  opacity: 1;
+  -webkit-animation: rotateText .5s linear;
+  -moz-animation: rotateText .5s linear;
+  -o-animation: rotateText .5s linear;
+  animation:  rotateText .5s linear;
 }
 .arrow-container {
   display: block;

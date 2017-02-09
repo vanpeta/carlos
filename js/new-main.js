@@ -15,10 +15,10 @@ var pattern = Trianglify({
 });
 $('main').append(pattern.canvas());
 
-$('.navBarElements').hover(function() {
-  $(this).find('.navText').removeClass('hidden');
-}, function() {
-  $(this).find('.navText').addClass('hidden');
-});
+// $('.navBarElements').hover(function() {
+//   $(this).find('.navText').removeClass('hidden');
+// }, function() {
+//   $(this).find('.navText').addClass('hidden');
+// });
 
 
