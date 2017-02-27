@@ -93,8 +93,8 @@ canvas {
   left: 50%;
   margin: -75px -250px;
   background: rgba(255, 255, 255, .8);
-  width: 500px;
-  height: 125px;
+  width: 40%;
+  height: 10vw;
   text-align: center;
 }
 .box1.navBarOn {
@@ -108,17 +108,27 @@ canvas {
 .box1.navBarOn > .greeting {
   opacity: 0;
 }
+.greeting, .text, .navBarElements, .title, .name {
+  font-family: monaco;
+}
 .greeting {
   margin: auto;
-  line-height: 125px;
-  font-family: monaco;
-  font-size: 40px;
+  line-height: 195%;
+  font-size: 5vw;
   color: #e1e1e1;
+}
+.name {
+  display: inline-block;
+  position: absolute;
+  color: #3b8ec0;
+  float: left;
+  left: 10px;
+  line-height: 60px;
+  font-size: 18px;
 }
 .navBarElements {
   display: inline-block;
   color: #3b8ec0;
-  font-family: monaco;
   line-height: 60px;
   width: 105px;
   background-color: transparent;
@@ -172,7 +182,7 @@ canvas {
 }
 .arrow-container.stick {
   position: fixed;
-  top: 20%;
+  top: 9%;
   left: 50%;
   margin-left: -40px;
 }
@@ -186,4 +196,29 @@ canvas {
   -o-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+.about, .title {
+  margin-top: 10vw;
+  text-align: center;
+  color: #3b8ec0;
+}
+.text {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(124, 124, 124, .5);
+  font-size: 1.3vw;
+  padding: 15px;
+  color: #ffffff;
+  border-radius: 20px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 1281px) {
+  .text {
+    font-size: 16px;
+  }
+  .greeting {
+    font-size: 40px;
+  }
 }
