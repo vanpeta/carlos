@@ -91,10 +91,11 @@ canvas {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin: -75px -250px;
+  transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, .8);
   width: 40%;
   height: 10vw;
+  max-height: 128px;
   text-align: center;
 }
 .box1.navBarOn {
@@ -102,8 +103,8 @@ canvas {
   margin: 0;
   width: 100% !important;
   height: 60px !important;
-  top: 0;
-  left: 0;
+  top: 30px !important;
+  left: 50 !important;
 }
 .box1.navBarOn > .greeting {
   opacity: 0;
@@ -121,7 +122,6 @@ canvas {
   display: inline-block;
   position: absolute;
   color: #3b8ec0;
-  float: left;
   left: 10px;
   line-height: 60px;
   font-size: 18px;
@@ -219,6 +219,6 @@ canvas {
     font-size: 16px;
   }
   .greeting {
-    font-size: 40px;
+    font-size: 65px;
   }
 }
