@@ -8,18 +8,16 @@ $(document).ready(function(){
       $('nav').addClass('hidden');
     }
     var arrow = $('.arrow-container');
-    if ((arrow.offset().top - $(window).scrollTop()) < (window.innerHeight * 0.09)) {
+    if ($(window).scrollTop() - (window.innerHeight - (window.innerHeight * 0.38)) > (window.innerHeight * 0.09)) {
       arrow.removeClass('pointing');
       arrow.addClass('stick pic');
       $('.arrow').addClass('hidden');
     }
-    if ((arrow.offset().top - $(window).scrollTop()) > (window.innerHeight * 0.09)) {
+    if ($(window).scrollTop() - (window.innerHeight - (window.innerHeight * 0.38)) < (window.innerHeight * 0.09)) {
       arrow.addClass('pointing');
       arrow.removeClass('stick pic');
       $('.arrow').removeClass('hidden');
     }
-
-    console.log(arrow.offset().top - $(window).scrollTop())
   });
 });
 
@@ -35,6 +33,6 @@ $('main').append(pattern.canvas());
 //   $(this).find('.navText').addClass('hidden');
 // });
 
-
+//(arrow.offset().top - $(window).scrollTop()) < (window.innerHeight * 0.09)
 
 
