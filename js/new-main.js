@@ -9,16 +9,15 @@ $(document).ready(function(){
     }
     var arrow = $('.arrow-container');
     if ((arrow.offset().top - $(window).scrollTop()) < (window.innerHeight * 0.09)) {
-      $('.arrow-container').removeClass('pointing');
-      $('.arrow-container').addClass('stick pic');
+      arrow.removeClass('pointing');
+      arrow.addClass('stick pic');
       $('.arrow').addClass('hidden');
     }
     if ((arrow.offset().top - $(window).scrollTop()) > (window.innerHeight * 0.09)) {
-      $('.arrow-container').addClass('pointing');
-      $('.arrow-container').removeClass('stick pic');
+      arrow.addClass('pointing');
+      arrow.removeClass('stick pic');
       $('.arrow').removeClass('hidden');
     }
-    var arrow = $('.arrow-container');
 
     console.log(arrow.offset().top - $(window).scrollTop())
   });
