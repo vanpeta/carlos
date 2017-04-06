@@ -7,18 +7,23 @@ $(document).ready(function(){
       $('.box1').removeClass('navBarOn');
       $('nav').addClass('hidden');
     }
-    if ($(window).scrollTop() > 460) {
+    var arrow = $('.arrow-container');
+    if ((arrow.offset().top - $(window).scrollTop()) < (window.innerHeight * 0.09)) {
       $('.arrow-container').removeClass('pointing');
       $('.arrow-container').addClass('stick pic');
       $('.arrow').addClass('hidden');
     }
-    if ($(window).scrollTop() < 460) {
+    if ((arrow.offset().top - $(window).scrollTop()) > (window.innerHeight * 0.09)) {
       $('.arrow-container').addClass('pointing');
       $('.arrow-container').removeClass('stick pic');
       $('.arrow').removeClass('hidden');
     }
+    var arrow = $('.arrow-container');
+
+    console.log(arrow.offset().top - $(window).scrollTop())
   });
 });
+
 var pattern = Trianglify({
   width: window.innerWidth,
   height: window.innerHeight
