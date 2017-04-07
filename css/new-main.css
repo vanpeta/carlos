@@ -72,20 +72,23 @@
   transition: 1s;
 }
 body {
+  position: relative;
   margin: 0;
-  height: 200vh;
+  height: 100vh;
+  width: 100vw;
 }
 .hidden {
   display: none !important;
 }
 main {
   height: 100vh;
+  z-index: -1000;
 }
 canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -100;
 }
 .box1 {
   position: fixed;
@@ -212,6 +215,20 @@ canvas {
   color: #ffffff;
   border-radius: 20px;
   text-align: left;
+}
+
+.content-wrapper {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+.content {
+    position: relative;
+    left: 0px;
+    top: 0px;
 }
 
 @media only screen and (min-width: 1281px) {

@@ -18,6 +18,7 @@ $(document).ready(function(){
       arrow.removeClass('stick pic');
       $('.arrow').removeClass('hidden');
     }
+		stickyTop();
   });
 });
 
@@ -26,6 +27,41 @@ var pattern = Trianglify({
   height: window.innerHeight
 });
 $('main').append(pattern.canvas());
+
+var lastWindowHeight = $(window).height();
+
+function checkScroll() {
+	var newWindowHeight = $(window).height();
+	var windowHeightDif = newWindowHeight - lastWindowHeight;
+	lastWindowHeight = newWindowHeight;
+
+	var contentHeight = $('.content-wrapper').height();
+	$('body').height(newWindowHeight + contentHeight);
+}
+
+function stickyTop() {
+	var windowScrollTop = $(window).scrollTop();
+	var maxScroll = ($(window).height() - 290);
+
+	if (windowScrollTop >= maxScroll) {
+		$('.content-wrapper').css('position', 'fixed').css('top', 290);
+	} else {
+		$('.content-wrapper').css('position', 'absolute').css('top', '')
+	}
+	if ($('.content-wrapper').css('position') === 'fixed') {
+		$('.content').css('top', -(windowScrollTop - maxScroll));
+	} else {
+		$('.content').css('top', 0);
+	}
+}
+
+checkScroll();
+stickyTop();
+$(window).resize(function () {
+	checkScroll();
+	stickyTop();
+})
+
 
 // $('.navBarElements').hover(function() {
 //   $(this).find('.navText').removeClass('hidden');
