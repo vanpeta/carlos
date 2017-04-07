@@ -76,6 +76,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  font-family: monaco;
 }
 .hidden {
   display: none !important;
@@ -112,9 +113,7 @@ canvas {
 .box1.navBarOn > .greeting {
   opacity: 0;
 }
-.greeting, .text, .navBarElements, .title, .name {
-  font-family: monaco;
-}
+
 .greeting {
   margin: auto;
   line-height: 195%;
@@ -200,23 +199,6 @@ canvas {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.about, .title {
-  margin-top: 10vw;
-  text-align: center;
-  color: #3b8ec0;
-}
-.text {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(124, 124, 124, .5);
-  font-size: 1.3vw;
-  padding: 15px;
-  color: #ffffff;
-  border-radius: 20px;
-  text-align: left;
-}
-
 .content-wrapper {
   position: absolute;
   left: 0px;
@@ -229,6 +211,47 @@ canvas {
     position: relative;
     left: 0px;
     top: 0px;
+}
+.about, .skills {
+  background: rgba(186, 186, 186, .4);
+  padding: 10px;
+}
+.text {
+  width: 48%;
+  display: inline-block;
+}
+.about-title-wrapper{
+  text-align: center;
+}
+.about-data-wrapper {
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.about-data {
+  text-align: left;
+  width: 80%;
+  display: inline-block;
+}
+.about-data-inputs {
+  background: rgba(224, 224, 224, .4);
+  margin: 5px;
+}
+.about-data-inputs > * {
+  display: inline-block;
+}
+.about-data-input-icon {
+  font-size: 30px;
+  color: #3b8ec0;
+  margin: 10px 20px;
+  width: 10%;
+  text-align: center;
+  display: inline-block;
+}
+.about-data-input-text {
+  width: 70%;
+  text-align: right;
 }
 
 @media only screen and (min-width: 1281px) {
