@@ -62,6 +62,10 @@ $(window).resize(function () {
 	stickyTop();
 })
 
+$('.meTrigger').click(function() {
+    $('.me').toggle();
+  });
+
 
 // $('.navBarElements').hover(function() {
 //   $(this).find('.navText').removeClass('hidden');
