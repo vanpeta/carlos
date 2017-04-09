@@ -72,29 +72,34 @@
   transition: 1s;
 }
 body {
+  position: relative;
   margin: 0;
-  height: 200vh;
+  height: 100vh;
+  width: 100vw;
+  font-family: monaco;
 }
 .hidden {
   display: none !important;
 }
 main {
   height: 100vh;
+  z-index: -1000;
 }
 canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -100;
 }
 .box1 {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin: -75px -250px;
+  transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, .8);
   width: 40%;
   height: 10vw;
+  max-height: 128px;
   text-align: center;
 }
 .box1.navBarOn {
@@ -102,15 +107,13 @@ canvas {
   margin: 0;
   width: 100% !important;
   height: 60px !important;
-  top: 0;
-  left: 0;
+  top: 30px !important;
+  left: 50 !important;
 }
 .box1.navBarOn > .greeting {
   opacity: 0;
 }
-.greeting, .text, .navBarElements, .title, .name {
-  font-family: monaco;
-}
+
 .greeting {
   margin: auto;
   line-height: 195%;
@@ -121,7 +124,6 @@ canvas {
   display: inline-block;
   position: absolute;
   color: #3b8ec0;
-  float: left;
   left: 10px;
   line-height: 60px;
   font-size: 18px;
@@ -197,21 +199,59 @@ canvas {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.about, .title {
-  margin-top: 10vw;
-  text-align: center;
-  color: #3b8ec0;
+.content-wrapper {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+.content {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+.about, .skills {
+  background: rgba(186, 186, 186, .4);
+  padding: 10px;
 }
 .text {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(124, 124, 124, .5);
-  font-size: 1.3vw;
-  padding: 15px;
-  color: #ffffff;
-  border-radius: 20px;
+  width: 48%;
+  display: inline-block;
+}
+.about-title-wrapper{
+  text-align: center;
+}
+.about-data-wrapper {
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.about-data {
   text-align: left;
+  width: 80%;
+  display: inline-block;
+}
+.about-data-inputs {
+  background: rgba(224, 224, 224, .4);
+  margin: 5px;
+}
+.about-data-inputs > * {
+  display: inline-block;
+}
+.about-data-input-icon {
+  font-size: 30px;
+  color: #3b8ec0;
+  margin: 10px 20px;
+  width: 10%;
+  text-align: center;
+  display: inline-block;
+}
+.about-data-input-text {
+  width: 70%;
+  text-align: right;
 }
 
 .pageContent {
@@ -225,6 +265,6 @@ canvas {
     font-size: 16px;
   }
   .greeting {
-    font-size: 40px;
+    font-size: 65px;
   }
 }
