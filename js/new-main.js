@@ -41,10 +41,10 @@ function checkScroll() {
 
 function stickyTop() {
 	var windowScrollTop = $(window).scrollTop();
-	var maxScroll = ($(window).height() - 290);
+	var maxScroll = ($(window).height() - 200);
 
 	if (windowScrollTop >= maxScroll) {
-		$('.content-wrapper').css('position', 'fixed').css('top', 290);
+		$('.content-wrapper').css('position', 'fixed').css('top', 200);
 	} else {
 		$('.content-wrapper').css('position', 'absolute').css('top', '')
 	}
